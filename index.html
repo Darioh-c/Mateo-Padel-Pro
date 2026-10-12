@@ -103,21 +103,22 @@ section{padding:92px 0;position:relative}
 
 /* ---------- COMING SOON ---------- */
 .soon{padding:70px 0}
-.flyer{position:relative;overflow:hidden;border-radius:26px;border:2px solid var(--red);padding:56px 48px;
-  background:radial-gradient(600px 380px at 92% 0%,rgba(255,0,0,.35),transparent 65%),radial-gradient(500px 340px at 0% 100%,rgba(190,242,100,.14),transparent 60%),linear-gradient(150deg,#1a1320,#0e1a33 55%,#0B1329);
+.flyer{position:relative;overflow:hidden;border-radius:26px;border:2px solid var(--red);padding:40px 56px 52px;
+  background:radial-gradient(600px 380px at 92% 0%,rgba(255,0,0,.32),transparent 65%),radial-gradient(500px 340px at 0% 100%,rgba(190,242,100,.12),transparent 60%),linear-gradient(150deg,#1a1320,#0e1a33 55%,#0B1329);
   box-shadow:0 30px 90px rgba(255,0,0,.18)}
 .flyer::before{content:"";position:absolute;inset:0;opacity:.35;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px);background-size:100% 40px;pointer-events:none}
 .flyer>*{position:relative}
-.flyer .pill{display:inline-flex;align-items:center;gap:9px;background:var(--lime);color:var(--navy);font-weight:800;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:7px 16px;border-radius:30px}
-.flyer .pill i{width:8px;height:8px;border-radius:50%;background:var(--red);animation:pulse 1.4s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
-.flyer .big{font-family:var(--title);font-size:clamp(64px,13vw,170px);line-height:.86;text-transform:uppercase;margin:22px 0 18px;letter-spacing:.01em}
+.flyer .kick{display:flex;align-items:center;justify-content:center;gap:12px;font-weight:800;font-size:15px;letter-spacing:.24em;text-transform:uppercase;color:#fff;margin-bottom:30px}
+.flyer .kick i{width:14px;height:14px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px rgba(255,0,0,.18);animation:pulse 1.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.flyer .body{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center}
+.flyer .big{font-family:var(--title);font-size:clamp(64px,11vw,150px);line-height:.86;text-transform:uppercase;letter-spacing:.01em}
 .flyer .big .red{color:var(--red)}
-.flyer .ev{font-size:clamp(20px,3vw,32px);font-weight:800;line-height:1.15}
-.flyer .meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.flyer .meta span{background:rgba(11,19,41,.6);border:1px solid var(--line);border-radius:12px;padding:11px 18px;font-weight:700;font-size:14.5px}
-.flyer .meta span b{color:var(--lime)}
-@media(max-width:920px){.flyer{padding:38px 24px}.soon{padding:40px 0}}
+.flyer .info{text-align:center;display:flex;flex-direction:column;align-items:center;gap:20px}
+.flyer .ev{font-size:clamp(20px,2.4vw,28px);font-weight:800;line-height:1.2;max-width:420px}
+.flyer .meta{display:flex;flex-direction:column;align-items:center;gap:8px;font-weight:600;font-size:16px;color:var(--slate)}
+.flyer .meta .dt{font-family:var(--title);font-size:clamp(30px,3.6vw,44px);letter-spacing:.03em;color:var(--lime);line-height:1}
+@media(max-width:920px){.flyer{padding:30px 24px 38px}.soon{padding:40px 0}.flyer .body{grid-template-columns:1fr;gap:28px}.flyer .big{text-align:left}.flyer .kick{font-size:13px;margin-bottom:22px}}
 
 /* ---------- ABOUT ---------- */
 .about-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:42px;align-items:center;margin-top:26px}
@@ -348,13 +349,17 @@ footer .mono{font-family:var(--title);color:var(--red);letter-spacing:.06em}
 <section class="soon" id="next">
   <div class="wrap">
     <div class="flyer">
-      <span class="pill"><i></i><span data-es="Próximo torneo" data-en="Next tournament">Próximo torneo</span></span>
-      <div class="big">Coming<br><span class="red">Soon</span></div>
-      <div class="ev">FIP Junior America Padel Cup 2026</div>
-      <div class="meta">
-        <span>📍 Cancún, México</span>
-        <span data-es="📅 <b>10–14 nov 2026</b>" data-en="📅 <b>Nov 10–14, 2026</b>">📅 <b>10–14 nov 2026</b></span>
-        <span data-es="🇪🇨 Representando a Ecuador" data-en="🇪🇨 Representing Ecuador">🇪🇨 Representando a Ecuador</span>
+      <div class="kick"><i></i><span data-es="Próximo torneo" data-en="Next tournament">Próximo torneo</span></div>
+      <div class="body">
+        <div class="big">Coming<br><span class="red">Soon</span></div>
+        <div class="info">
+          <div class="ev">FIP Junior America Padel Cup 2026</div>
+          <div class="meta">
+            <span class="dt" data-es="10–14 Nov" data-en="Nov 10–14">10–14 Nov</span>
+            <span>Cancún, México</span>
+            <span data-es="🇪🇨 Representando a Ecuador" data-en="🇪🇨 Representing Ecuador">🇪🇨 Representando a Ecuador</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
