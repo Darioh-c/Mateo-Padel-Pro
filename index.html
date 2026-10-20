@@ -61,6 +61,11 @@ nav{
 .nav-links{display:flex;gap:26px;align-items:center}
 .nav-links a{font-size:13.5px;font-weight:500;color:var(--slate);transition:.2s;text-transform:uppercase;letter-spacing:.03em}
 .nav-links a:hover{color:var(--white)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-train{display:inline-flex;align-items:center;background:var(--lime);color:var(--navy);font-weight:700;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;padding:8px 14px;border-radius:30px;white-space:nowrap;transition:.2s}
+.nav-train:hover{filter:brightness(1.06);transform:translateY(-1px)}
+@media(max-width:920px){.nav-train{font-size:11px;padding:7px 11px}}
+@media(max-width:560px){.brand .nm{display:none}.nav-in{gap:10px}}
 .lang{display:flex;align-items:center;border:1px solid var(--line);border-radius:30px;overflow:hidden;font-weight:700;font-size:12.5px}
 .lang button{background:none;border:0;color:var(--slate-dim);padding:7px 13px;cursor:pointer;font-family:var(--body);font-weight:700;letter-spacing:.04em;transition:.2s}
 .lang button.on{background:var(--red);color:v#fff}
@@ -321,9 +326,12 @@ footer .mono{font-family:var(--title);color:var(--red);letter-spacing:.06em}
       <a href="#offer" data-es="Colaboración" data-en="Partnership">Colaboración</a>
       <a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a>
     </div>
-    <div class="lang" role="group" aria-label="language">
-      <button id="b-es" onclick="setLang('es')">ES</button>
-      <button id="b-en" class="on" onclick="setLang('en')">EN</button>
+    <div class="nav-right">
+      <a class="nav-train" href="/train/" data-es="Entrena conmigo" data-en="Train with me">Entrena conmigo</a>
+      <div class="lang" role="group" aria-label="language">
+        <button id="b-es" onclick="setLang('es')">ES</button>
+        <button id="b-en" class="on" onclick="setLang('en')">EN</button>
+      </div>
     </div>
   </div>
 </nav>
@@ -684,7 +692,7 @@ footer .mono{font-family:var(--title);color:var(--red);letter-spacing:.06em}
 
 <footer>
   <div class="wrap">
-    <span class="mono">MATEO HERRERA</span> · <span data-es="Jugador Profesional de Pádel · N°1 Sub-18 Ecuador" data-en="Professional Padel Player · N°1 U-18 Ecuador">Jugador Profesional de Pádel · N°1 Sub-18 Ecuador</span>
+    <span class="mono">MATEO HERRERA</span> · <span data-es="Jugador Profesional de Pádel · N°1 Sub-18 Ecuador" data-en="Professional Padel Player · N°1 U-18 Ecuador">Jugador Profesional de Pádel · N°1 Sub-18 Ecuador</span> · <a href="/train/" data-es="Clases en Doral" data-en="Lessons in Doral" style="color:var(--lime)">Clases en Doral</a>
   </div>
 </footer>
 
