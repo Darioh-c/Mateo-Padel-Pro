@@ -15,22 +15,22 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#FFFFFF;
-  --navy-2:#F7F8F5;
-  --card:#F5F6F2;
-  --card-2:#EDEFE9;
-  --line:#DCE0D7;
-  --red:#16402D;
-  --red-soft:#1F5A3F;
-  --lime:#2F6B4C;
-  --white:#0B0B0B;
-  --slate:#3B403C;
-  --slate-dim:#6E746F;
-  --title:'Anton',Impact,'Poppins',sans-serif;
-  --body:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --navy:#F7F4ED;
+  --navy-2:#F1EDE1;
+  --card:#FCFAF5;
+  --card-2:#EFEADD;
+  --line:#E3DCCB;
+  --red:#1E3D2F;
+  --red-soft:#2E5A44;
+  --lime:#55705F;
+  --white:#161613;
+  --slate:#44473F;
+  --slate-dim:#817D6E;
+  --title:'Playfair Display',Georgia,serif;
+  --body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   --maxw:1180px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -50,13 +50,13 @@ a{color:inherit;text-decoration:none}
 /* ---------- NAV ---------- */
 nav{
   position:sticky;top:0;z-index:100;
-  background:rgba(255,255,255,.88);
+  background:rgba(247,244,237,.92);
   backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line);
 }
 .nav-in{max-width:var(--maxw);margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px}
 .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.04em}
-.brand .mono{font-family:var(--title);font-size:22px;letter-spacing:.06em;background:var(--red);color:var(--navy);width:38px;height:38px;display:grid;place-items:center;border-radius:9px}
+.brand .mono{font-family:var(--title);font-size:22px;letter-spacing:.06em;background:var(--red);color:var(--navy);width:38px;height:38px;display:grid;place-items:center;border-radius:5px}
 .brand .nm{font-size:15px;text-transform:uppercase}
 .nav-links{display:flex;gap:26px;align-items:center}
 .nav-links a{font-size:13.5px;font-weight:500;color:var(--slate);transition:.2s;text-transform:uppercase;letter-spacing:.03em}
@@ -77,13 +77,13 @@ section{padding:92px 0;position:relative}
 /* ---------- HERO ---------- */
 .hero{padding:0;min-height:calc(100vh - 67px);display:flex;align-items:center;position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:
-   radial-gradient(900px 600px at 78% 20%,rgba(22,64,45,.07),transparent 60%),
-   radial-gradient(700px 500px at 10% 90%,rgba(47,107,76,.07),transparent 60%),
-   linear-gradient(160deg,#FFFFFF,#F5F7F3 60%,#FFFFFF);z-index:0}
+   radial-gradient(900px 600px at 78% 20%,rgba(30,61,47,.07),transparent 60%),
+   radial-gradient(700px 500px at 10% 90%,rgba(85,112,95,.07),transparent 60%),
+   linear-gradient(160deg,#F7F4ED,#F0EBDE 60%,#F7F4ED);z-index:0}
 .hero-lines{position:absolute;inset:0;z-index:0;opacity:.5;
   background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px);background-size:100% 46px}
 .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;width:100%}
-.hero h1{font-family:var(--title);font-size:clamp(54px,9vw,118px);line-height:.9;letter-spacing:.01em;text-transform:uppercase}
+.hero h1{font-family:var(--title);font-size:clamp(42px,7.5vw,94px);line-height:.98;letter-spacing:.01em;text-transform:uppercase}
 .hero h1 .red{color:var(--red)}
 .hero .sub{margin-top:22px;display:flex;flex-direction:column;gap:2px;font-size:clamp(15px,1.9vw,20px);font-weight:600;color:var(--white)}
 .hero .sub b{color:var(--red);font-family:var(--title);font-weight:400;font-size:clamp(24px,3vw,34px);letter-spacing:.03em;text-transform:uppercase;line-height:1.1}
@@ -91,30 +91,30 @@ section{padding:92px 0;position:relative}
 .hero .mini span+span{border-left:1px solid var(--red);margin-left:14px;padding-left:14px}
 @media(max-width:480px){.hero .mini{font-size:11px;letter-spacing:.05em}.hero .mini span+span{margin-left:9px;padding-left:9px}}
 .cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
-.btn{font-weight:700;font-size:14px;letter-spacing:.02em;padding:14px 26px;border-radius:11px;cursor:pointer;border:1px solid transparent;transition:.2s;display:inline-flex;align-items:center;gap:9px}
+.btn{font-weight:700;font-size:14px;letter-spacing:.02em;padding:14px 26px;border-radius:6px;cursor:pointer;border:1px solid transparent;transition:.2s;display:inline-flex;align-items:center;gap:9px}
 .btn-red{background:var(--red);color:var(--navy)}
 .btn-red:hover{background:var(--red-soft);transform:translateY(-2px)}
 .btn-ghost{background:transparent;border-color:var(--line);color:var(--white)}
 .btn-ghost:hover{border-color:var(--lime);color:var(--lime)}
 .hero-photo{position:relative}
-.hero-photo .frame{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.14);position:relative}
+.hero-photo .frame{border-radius:10px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.14);position:relative}
 .hero-photo .frame img{width:100%;height:560px;object-fit:cover;object-position:50% 30%}
-.hero-photo .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,rgba(22,64,45,.10),transparent 45%,rgba(14,34,25,.55))}
-.hero-photo .badge{position:absolute;left:-18px;bottom:30px;background:var(--red);color:var(--navy);font-family:var(--title);font-size:30px;letter-spacing:.02em;padding:12px 20px;border-radius:13px;box-shadow:0 14px 30px rgba(22,64,45,.35);line-height:1}
+.hero-photo .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,rgba(30,61,47,.10),transparent 45%,rgba(14,34,25,.55))}
+.hero-photo .badge{position:absolute;left:-18px;bottom:30px;background:var(--red);color:var(--navy);font-family:var(--title);font-size:30px;letter-spacing:.02em;padding:12px 20px;border-radius:6px;box-shadow:0 14px 30px rgba(30,61,47,.35);line-height:1}
 .hero-photo .badge small{display:block;font-family:var(--body);font-size:10.5px;font-weight:600;letter-spacing:.14em;opacity:.92;margin-top:3px}
 
 /* ---------- COMING SOON ---------- */
 .soon{padding:70px 0}
-.flyer{position:relative;overflow:hidden;border-radius:26px;border:2px solid var(--red);padding:40px 56px 52px;
-  background:radial-gradient(600px 380px at 92% 0%,rgba(22,64,45,.10),transparent 65%),radial-gradient(500px 340px at 0% 100%,rgba(47,107,76,.12),transparent 60%),linear-gradient(150deg,#F3F6F1,#FFFFFF 55%,#FFFFFF);
-  box-shadow:0 30px 90px rgba(22,64,45,.08)}
+.flyer{position:relative;overflow:hidden;border-radius:10px;border:2px solid var(--red);padding:40px 56px 52px;
+  background:radial-gradient(600px 380px at 92% 0%,rgba(30,61,47,.10),transparent 65%),radial-gradient(500px 340px at 0% 100%,rgba(85,112,95,.12),transparent 60%),linear-gradient(150deg,#F0EBDE,#F7F4ED 55%,#F7F4ED);
+  box-shadow:0 30px 90px rgba(30,61,47,.08)}
 .flyer::before{content:"";position:absolute;inset:0;opacity:.35;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px);background-size:100% 40px;pointer-events:none}
 .flyer>*{position:relative}
 .flyer .kick{display:flex;align-items:center;justify-content:center;gap:12px;font-weight:800;font-size:15px;letter-spacing:.24em;text-transform:uppercase;color:var(--white);margin-bottom:30px}
-.flyer .kick i{width:14px;height:14px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px rgba(22,64,45,.08);animation:pulse 1.4s infinite}
+.flyer .kick i{width:14px;height:14px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px rgba(30,61,47,.08);animation:pulse 1.4s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 .flyer .body{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center}
-.flyer .big{font-family:var(--title);font-size:clamp(64px,11vw,150px);line-height:.86;text-transform:uppercase;letter-spacing:.01em}
+.flyer .big{font-family:var(--title);font-size:clamp(46px,8vw,110px);line-height:.95;text-transform:uppercase;letter-spacing:.01em}
 .flyer .big .red{color:var(--red)}
 .flyer .info{text-align:center;display:flex;flex-direction:column;align-items:center;gap:20px}
 .flyer .ev{font-size:clamp(20px,2.4vw,28px);font-weight:800;line-height:1.2;max-width:420px}
@@ -128,44 +128,44 @@ section{padding:92px 0;position:relative}
 .about-grid p{color:var(--slate);font-size:16.5px;margin-bottom:16px}
 .about-grid p b{color:var(--white)}
 .pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px}
-.pillar{background:var(--card);border:1px solid var(--line);border-top:2px solid var(--red);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.pillar{background:var(--card);border:1px solid var(--line);border-top:2px solid var(--red);border-radius:6px;padding:16px 18px;display:flex;flex-direction:column;gap:6px}
 .pillar .pn{font-family:var(--title);font-size:14px;letter-spacing:.14em;color:var(--red)}
 .pillar .pt{font-family:var(--title);font-size:clamp(18px,2vw,22px);letter-spacing:.03em;text-transform:uppercase;line-height:1.1;color:var(--white)}
-.about-photo{border-radius:18px;overflow:hidden;border:1px solid var(--line);position:relative;aspect-ratio:4/5}
+.about-photo{border-radius:8px;overflow:hidden;border:1px solid var(--line);position:relative;aspect-ratio:4/5}
 .about-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 42%}
 .about-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,34,25,.6))}
 
 /* pending chip */
-.pend{display:inline-block;border:1px dashed var(--lime);color:var(--lime);background:rgba(47,107,76,.08);border-radius:7px;padding:1px 9px;font-size:.82em;font-weight:600}
+.pend{display:inline-block;border:1px dashed var(--lime);color:var(--lime);background:rgba(85,112,95,.08);border-radius:7px;padding:1px 9px;font-size:.82em;font-weight:600}
 
 /* ---------- ACHIEVEMENTS ---------- */
 .ach-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:center;margin-top:30px}
-.bignum{background:linear-gradient(160deg,var(--card),#FFFFFF);border:1px solid var(--line);border-radius:22px;padding:38px 30px;text-align:center;position:relative;overflow:hidden}
-.bignum::before{content:"";position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(22,64,45,.22),transparent 70%)}
-.bignum .n{font-family:var(--title);font-size:clamp(90px,16vw,150px);color:var(--red);line-height:.85;position:relative}
+.bignum{background:linear-gradient(160deg,var(--card),#F7F4ED);border:1px solid var(--line);border-radius:10px;padding:38px 30px;text-align:center;position:relative;overflow:hidden}
+.bignum::before{content:"";position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(30,61,47,.22),transparent 70%)}
+.bignum .n{font-family:var(--title);font-size:clamp(70px,12vw,120px);color:var(--red);line-height:.85;position:relative}
 .bignum .cap{font-weight:700;font-size:15px;letter-spacing:.04em;margin-top:6px;position:relative}
 .bignum .cap span{color:var(--lime)}
 .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.acard{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:18px;display:flex;gap:14px;align-items:flex-start;transition:.2s}
+.acard{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;display:flex;gap:14px;align-items:flex-start;transition:.2s}
 .acard:hover{border-color:var(--red);transform:translateY(-2px)}
-.acard .ic{width:42px;height:42px;flex:none;border-radius:11px;background:rgba(47,107,76,.12);display:grid;place-items:center;color:var(--lime)}
+.acard .ic{width:42px;height:42px;flex:none;border-radius:6px;border:1px solid var(--line);display:grid;place-items:center;color:var(--red)}
 .acard h4{font-size:15px;font-weight:700;margin-bottom:3px}
 .acard p{font-size:12.8px;color:var(--slate-dim);line-height:1.45}
 .acard.x p{color:var(--slate)}
 
 /* ---------- TIMELINE ---------- */
 .tl{margin-top:42px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
-.tl::before{content:"";position:absolute;top:26px;left:6%;right:6%;height:3px;background:linear-gradient(90deg,var(--red),rgba(22,64,45,.25));border-radius:3px}
+.tl::before{content:"";position:absolute;top:26px;left:6%;right:6%;height:3px;background:linear-gradient(90deg,var(--red),rgba(30,61,47,.25));border-radius:3px}
 .tlcol{padding:0 14px;position:relative}
 .tlcol .yr{font-family:var(--title);font-size:30px;background:var(--navy);border:2px solid var(--red);color:var(--white);width:max-content;padding:6px 16px;border-radius:30px;position:relative;z-index:2;margin:0 auto 22px;letter-spacing:.03em}
 .tlcol ul{list-style:none;display:flex;flex-direction:column;gap:10px}
-.tlcol li{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--red);border-radius:9px;padding:11px 13px;font-size:12.7px;color:var(--slate);line-height:1.4}
+.tlcol li{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--red);border-radius:5px;padding:11px 13px;font-size:12.7px;color:var(--slate);line-height:1.4}
 .tlcol li b{color:var(--white);font-weight:700}
 
 /* ---------- INTL CARDS ---------- */
 .duo{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
-.wcard{background:linear-gradient(150deg,var(--card),#FFFFFF);border:1px solid var(--line);border-radius:18px;padding:30px;position:relative;overflow:hidden}
-.wcard .globe{position:absolute;top:-30px;right:-30px;color:rgba(47,107,76,.10);width:150px;height:150px}
+.wcard{background:linear-gradient(150deg,var(--card),#F7F4ED);border:1px solid var(--line);border-radius:8px;padding:30px;position:relative;overflow:hidden}
+.wcard .globe{position:absolute;top:-30px;right:-30px;color:rgba(85,112,95,.10);width:150px;height:150px}
 .wcard .yrtag{display:inline-block;font-family:var(--title);font-size:15px;letter-spacing:.04em;color:var(--lime);margin-bottom:6px}
 .wcard h3{font-size:21px;font-weight:800;margin-bottom:4px}
 .wcard .loc{color:var(--red-soft);font-weight:700;font-size:13.5px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:14px}
@@ -173,32 +173,32 @@ section{padding:92px 0;position:relative}
 
 /* ---------- REACH ---------- */
 .reach-hero{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 22px;text-align:center;position:relative;overflow:hidden}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:30px 22px;text-align:center;position:relative;overflow:hidden}
 .stat::after{content:"";position:absolute;bottom:0;left:0;width:100%;height:3px;background:var(--lime)}
 .stat .v{font-family:var(--title);font-size:clamp(46px,7vw,66px);color:var(--lime);line-height:.9}
 .stat .l{margin-top:10px;font-size:13.5px;color:var(--slate);font-weight:500}
 .reach-low{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:26px;align-items:center}
-.chart{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.chart{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:26px}
 .chart h4{font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--slate);margin-bottom:24px}
 .bars{display:flex;align-items:flex-end;gap:34px;height:200px;padding-left:6px}
 .barwrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
-.bar{width:100%;border-radius:9px 9px 0 0;position:relative;transition:height 1s ease;display:flex;align-items:flex-start;justify-content:center}
+.bar{width:100%;border-radius:4px 4px 0 0;position:relative;transition:height 1s ease;display:flex;align-items:flex-start;justify-content:center}
 .bar .val{position:absolute;top:-26px;font-family:var(--title);font-size:20px}
-.bar.followers{background:linear-gradient(180deg,var(--lime),rgba(47,107,76,.4))}
+.bar.followers{background:linear-gradient(180deg,var(--lime),rgba(85,112,95,.4))}
 .bar.followers .val{color:var(--lime)}
-.bar.reach{background:linear-gradient(180deg,var(--red),rgba(22,64,45,.35))}
+.bar.reach{background:linear-gradient(180deg,var(--red),rgba(30,61,47,.35))}
 .bar.reach .val{color:var(--red-soft)}
 .barlbl{margin-top:12px;font-size:12.5px;color:var(--slate);font-weight:600;text-align:center}
 .reach-info{display:flex;flex-direction:column;gap:14px}
 .rline{display:flex;gap:13px;align-items:flex-start;font-size:14.5px;color:var(--slate)}
 .rline .ic{color:var(--lime);flex:none;margin-top:2px}
 .rline b{color:var(--white)}
-.closing{margin-top:8px;background:rgba(22,64,45,.08);border:1px solid rgba(22,64,45,.3);border-left:4px solid var(--red);border-radius:10px;padding:16px 18px;font-size:14.5px;font-weight:600;color:var(--white)}
+.closing{margin-top:8px;background:rgba(30,61,47,.08);border:1px solid rgba(30,61,47,.3);border-left:4px solid var(--red);border-radius:10px;padding:16px 18px;font-size:14.5px;font-weight:600;color:var(--white)}
 
 /* ---------- OFFER ---------- */
 .offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px;align-items:stretch}
-.ocard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px 24px;display:flex;flex-direction:column;position:relative}
-.ocard.feat{border:2px solid var(--red);background:linear-gradient(170deg,#F3F6F1,#FFFFFF);box-shadow:0 24px 60px rgba(22,64,45,.07);transform:scale(1.03)}
+.ocard{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:28px 24px;display:flex;flex-direction:column;position:relative}
+.ocard.feat{border:2px solid var(--red);background:linear-gradient(170deg,#F0EBDE,#F7F4ED);box-shadow:0 24px 60px rgba(30,61,47,.07);transform:scale(1.03)}
 .ocard .ribbon{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--red);color:var(--navy);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 16px;border-radius:30px;white-space:nowrap}
 .ocard .tier{font-family:var(--title);font-size:26px;letter-spacing:.04em;text-transform:uppercase}
 .ocard.feat .tier{color:var(--red-soft)}
@@ -216,16 +216,16 @@ section{padding:92px 0;position:relative}
 .train-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
 .tcard.now{border-color:var(--lime)}
 @media(max-width:1100px){.train-grid{grid-template-columns:repeat(2,1fr)}}
-.tcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 22px;transition:.2s}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:26px 22px;transition:.2s}
 .tcard:hover{border-color:var(--lime);transform:translateY(-3px)}
-.tcard .ic{width:48px;height:48px;border-radius:13px;background:rgba(22,64,45,.12);display:grid;place-items:center;color:var(--red-soft);margin-bottom:16px}
+.tcard .ic{width:48px;height:48px;border-radius:6px;background:rgba(30,61,47,.12);display:grid;place-items:center;color:var(--red-soft);margin-bottom:16px}
 .tcard h4{font-size:16px;font-weight:800;margin-bottom:12px}
 .tcard .it{padding:10px 0;border-top:1px solid var(--line);font-size:13.5px;color:var(--slate)}
 .tcard .it b{color:var(--white);display:block;font-size:14px;font-weight:700}
 .tcard .it span{font-size:12.3px;color:var(--slate-dim)}
 
 /* ---------- BRANDS ---------- */
-.btable{margin-top:30px;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.btable{margin-top:30px;border:1px solid var(--line);border-radius:8px;overflow:hidden}
 .brow{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:0;align-items:center;border-bottom:1px solid var(--line)}
 .brow:last-child{border-bottom:0}
 .brow.head{background:var(--card-2);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--slate-dim)}
@@ -233,8 +233,8 @@ section{padding:92px 0;position:relative}
 .brow.head>div{padding:14px 22px}
 .brow .bn{font-weight:700;font-size:16px;display:flex;align-items:center;gap:12px}
 .brow .bn .dot{width:10px;height:10px;border-radius:50%;flex:none}
-.st{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:5px 12px;border-radius:20px;width:max-content}
-.st.now{background:rgba(47,107,76,.14);color:var(--lime)}
+.st{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:5px 12px;border-radius:10px;width:max-content}
+.st.now{background:rgba(85,112,95,.14);color:var(--lime)}
 .st.past{background:rgba(147,163,150,.14);color:var(--slate-dim)}
 .brow .yr{color:var(--slate);font-size:14px}
 
@@ -245,7 +245,7 @@ section{padding:92px 0;position:relative}
 .why-item .n{font-family:var(--title);font-size:24px;color:var(--red);flex:none;width:42px;line-height:1}
 .why-item p{font-size:15px;color:var(--slate)}
 .why-item p b{color:var(--white)}
-.why-video{position:relative;justify-self:center;width:100%;max-width:380px;aspect-ratio:9/16;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.14);background:#000}
+.why-video{position:relative;justify-self:center;width:100%;max-width:380px;aspect-ratio:9/16;border-radius:8px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.14);background:#000}
 .why-video video{width:100%;height:100%;object-fit:cover;display:block}
 .snd{position:absolute;right:12px;bottom:12px;display:flex;align-items:center;gap:8px;background:rgba(14,34,25,.78);backdrop-filter:blur(8px);border:1px solid var(--line);color:#fff;font-family:var(--body);font-weight:700;font-size:12.5px;letter-spacing:.03em;padding:9px 14px;border-radius:30px;cursor:pointer;transition:.2s}
 .snd:hover{border-color:var(--lime)}
@@ -256,25 +256,25 @@ section{padding:92px 0;position:relative}
 
 /* ---------- GALLERY ---------- */
 .gal{margin-top:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.gal figure{overflow:hidden;border-radius:14px;border:1px solid var(--line);position:relative;aspect-ratio:4/5}
+.gal figure{overflow:hidden;border-radius:8px;border:1px solid var(--line);position:relative;aspect-ratio:4/5}
 .gal img{width:100%;height:100%;object-fit:cover;object-position:50% 38%;transition:.5s}
 .gal figure:hover img{transform:scale(1.06)}
 .gal figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(14,34,25,.45));pointer-events:none}
-.team-banner{margin-top:14px;border-radius:16px;overflow:hidden;border:1px solid var(--line);position:relative;aspect-ratio:858/470}
+.team-banner{margin-top:14px;border-radius:8px;overflow:hidden;border:1px solid var(--line);position:relative;aspect-ratio:858/470}
 .team-banner img{width:100%;height:100%;object-fit:cover;object-position:50% 28%}
 .team-banner .cap{position:absolute;left:20px;bottom:16px;font-weight:700;font-size:13.5px;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.7);z-index:2}
 
 /* ---------- CONTACT ---------- */
 .contact{background:
-   radial-gradient(700px 400px at 80% 10%,rgba(22,64,45,.08),transparent 60%),
-   linear-gradient(160deg,#F5F7F3,#FFFFFF);
+   radial-gradient(700px 400px at 80% 10%,rgba(30,61,47,.08),transparent 60%),
+   linear-gradient(160deg,#F0EBDE,#F7F4ED);
   border-top:1px solid var(--line)}
-.contact h2{font-family:var(--title);font-size:clamp(40px,7vw,76px);text-transform:uppercase;line-height:.92}
+.contact h2{font-family:var(--title);font-size:clamp(34px,6vw,64px);text-transform:uppercase;line-height:1}
 .contact h2 .red{color:var(--red)}
 .contact .phr{font-size:clamp(17px,2.4vw,24px);font-weight:600;color:var(--lime);margin:16px 0 30px}
 .cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:6px;max-width:820px}
-.cc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:6px}
-.cc .ic{color:var(--lime);margin-bottom:4px}
+.cc{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:6px}
+.cc .ic{color:var(--red);margin-bottom:4px}
 .cc .k{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate-dim);font-weight:700}
 .cc .v{font-size:15px;font-weight:600;word-break:break-word}
 .cc a.v:hover{color:var(--lime)}
@@ -405,23 +405,23 @@ footer .mono{font-family:var(--title);color:var(--red);letter-spacing:.06em}
       </div>
       <div class="cards">
         <div class="acard x">
-          <div class="ic">🏆</div>
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4zM7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4"/></svg></div>
           <div><h4 data-es="N°1 Nacional Sub-18" data-en="N°1 National U-18">N°1 Nacional Sub-18</h4><p data-es="Líder actual del ranking de Ecuador." data-en="Current leader of Ecuador's ranking.">Líder actual del ranking de Ecuador.</p></div>
         </div>
         <div class="acard x">
-          <div class="ic">🥇</div>
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8l-2.5 7h-3L8 3z"/><circle cx="12" cy="15" r="4.5"/></svg></div>
           <div><h4 data-es="N°1 Nacional Sub-16" data-en="N°1 National U-16">N°1 Nacional Sub-16</h4><p data-es="Líder histórico de la categoría." data-en="All-time leader of the category.">Líder histórico de la categoría.</p></div>
         </div>
         <div class="acard x">
-          <div class="ic">🥉</div>
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8l-2.5 7h-3L8 3z"/><circle cx="12" cy="15" r="4.4"/></svg></div>
           <div><h4 data-es="N°3 Nacional Sub-14" data-en="N°3 National U-14">N°3 Nacional Sub-14</h4><p data-es="Podio nacional en categoría formativa." data-en="National podium in the youth category.">Podio nacional en categoría formativa.</p></div>
         </div>
         <div class="acard x">
-          <div class="ic">🌎</div>
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
           <div><h4 data-es="N°28 de América" data-en="N°28 in the Americas">N°28 de América</h4><p data-es="Ranking FIP Promises Junior Sub-18." data-en="FIP Promises Junior U-18 Ranking.">Ranking FIP Promises Junior Sub-18.</p></div>
         </div>
         <div class="acard x" style="grid-column:span 2">
-          <div class="ic">⭐</div>
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.8 6.3.8-4.6 4.3 1.2 6.1L12 17l-5.6 3 1.2-6.1L3 9.6l6.3-.8L12 3z"/></svg></div>
           <div><h4 data-es="Campeón FIP Promises Sub-18 y Sub-16" data-en="FIP Promises Champion U-18 & U-16">Campeón FIP Promises Sub-18 y Sub-16</h4><p data-es="Título internacional avalado por la Federación Internacional de Pádel (FIP)." data-en="International title endorsed by the International Padel Federation (FIP).">Título internacional avalado por la Federación Internacional de Pádel (FIP).</p></div>
         </div>
       </div>
@@ -481,7 +481,6 @@ footer .mono{font-family:var(--title);color:var(--red);letter-spacing:.06em}
     <div class="eyebrow"><span class="bar"></span><h2 data-es="Competiciones Internacionales" data-en="International Competitions">Competiciones Internacionales</h2></div>
     <div class="duo">
       <div class="wcard">
-        <div class="globe">🌐</div>
         <div class="yrtag">2023</div>
         <h3 data-es="Mundial Junior FIP" data-en="FIP Junior World Cup">Mundial Junior FIP</h3>
         <div class="loc">Asunción, Paraguay</div>
@@ -489,7 +488,6 @@ footer .mono{font-family:var(--title);color:var(--red);letter-spacing:.06em}
            data-en="Took part in the FIP Junior Padel World Championship, competing on courts of the highest regional demand.">Participación en el Junior Pádel World Championship de la FIP, midiéndome en canchas de máxima exigencia regional.</p>
       </div>
       <div class="wcard">
-        <div class="globe">🌐</div>
         <div class="yrtag">2025</div>
         <h3 data-es="Mundial Junior FIP" data-en="FIP Junior World Cup">Mundial Junior FIP</h3>
         <div class="loc">Reus, España</div>
@@ -497,7 +495,6 @@ footer .mono{font-family:var(--title);color:var(--red);letter-spacing:.06em}
            data-en="Represented Ecuador at the World Cup, gaining experience against Europe's top padel academies.">Representé a Ecuador en el Mundial, ganando experiencia frente a las mejores canteras europeas del pádel.</p>
       </div>
       <div class="wcard">
-        <div class="globe">🌐</div>
         <div class="yrtag">2026</div>
         <h3>FIP Promises Miami</h3>
         <div class="loc" data-es="Miami, EE.UU." data-en="Miami, USA">Miami, EE.UU.</div>
@@ -511,19 +508,18 @@ footer .mono{font-family:var(--title);color:var(--red);letter-spacing:.06em}
 <!-- ================= REACH ================= -->
 <section id="reach">
   <div class="wrap">
-    <div class="tag" data-es="● Audiencia en crecimiento" data-en="● Growing audience">● Audiencia en crecimiento</div>
     <div class="eyebrow"><span class="bar"></span><h2 data-es="Alcance y Audiencia" data-en="Reach & Audience">Alcance y Audiencia</h2></div>
     <div class="reach-hero">
-      <div class="stat"><div class="v">13.500</div><div class="l" data-es="Personas alcanzadas cada mes en mi perfil" data-en="People reached every month on my profile">Personas alcanzadas cada mes en mi perfil</div></div>
+      <div class="stat"><div class="v">19.000</div><div class="l" data-es="Personas alcanzadas cada mes en mi perfil" data-en="People reached every month on my profile">Personas alcanzadas cada mes en mi perfil</div></div>
       <div class="stat"><div class="v">+1.000</div><div class="l" data-es="Comunidad que me sigue de forma directa" data-en="Community that follows me directly">Comunidad que me sigue de forma directa</div></div>
-      <div class="stat"><div class="v">×12</div><div class="l" data-es="Mi alcance multiplica por más de doce mi número de seguidores" data-en="My reach multiplies my follower count by more than twelve">Mi alcance multiplica por más de doce mi número de seguidores</div></div>
+      <div class="stat"><div class="v">×19</div><div class="l" data-es="Mi alcance multiplica por diecinueve mi número de seguidores" data-en="My reach multiplies my follower count by nineteen">Mi alcance multiplica por diecinueve mi número de seguidores</div></div>
     </div>
     <div class="reach-low">
       <div class="chart">
         <h4 data-es="Seguidores vs. Alcance mensual" data-en="Followers vs. Monthly reach">Seguidores vs. Alcance mensual</h4>
         <div class="bars">
-          <div class="barwrap"><div class="bar followers" style="height:13%"><span class="val">1.000</span></div><div class="barlbl" data-es="Seguidores" data-en="Followers">Seguidores</div></div>
-          <div class="barwrap"><div class="bar reach" style="height:100%"><span class="val">13.500</span></div><div class="barlbl" data-es="Alcance mensual" data-en="Monthly reach">Alcance mensual</div></div>
+          <div class="barwrap"><div class="bar followers" style="height:6%"><span class="val">1.000</span></div><div class="barlbl" data-es="Seguidores" data-en="Followers">Seguidores</div></div>
+          <div class="barwrap"><div class="bar reach" style="height:100%"><span class="val">19.000</span></div><div class="barlbl" data-es="Alcance mensual" data-en="Monthly reach">Alcance mensual</div></div>
         </div>
       </div>
       <div class="reach-info">
@@ -589,24 +585,20 @@ footer .mono{font-family:var(--title);color:var(--red);letter-spacing:.06em}
     <p class="lead" data-es="Hoy entreno en Miami; me formé entre Ecuador y España." data-en="Now training in Miami; developed between Ecuador and Spain.">Hoy entreno en Miami; me formé entre Ecuador y España.</p>
     <div class="train-grid">
       <div class="tcard now">
-        <div class="ic">🌴</div>
         <h4 data-es="Miami · Actual" data-en="Miami · Current">Miami · Actual</h4>
         <div class="it"><b>Ola Padel by Nox</b><span data-es="Entrenamiento actual · Doral, FL" data-en="Current training base · Doral, FL">Entrenamiento actual · Doral, FL</span></div>
       </div>
       <div class="tcard">
-        <div class="ic">🌍</div>
         <h4 data-es="Europa" data-en="Europe">Europa</h4>
         <div class="it"><b>Nastics Sports Academy</b><span data-es="Desarrollo de élite · Barcelona, España" data-en="Elite development · Barcelona, Spain">Desarrollo de élite · Barcelona, España</span></div>
       </div>
       <div class="tcard">
-        <div class="ic">🏖️</div>
         <h4 data-es="Manta y Costa" data-en="Manta & Coast">Manta y Costa</h4>
         <div class="it"><b>ZM Academy</b><span data-es="Optimización táctica · Manta" data-en="Tactical optimization · Manta">Optimización táctica · Manta</span></div>
         <div class="it"><b>M1 Academy</b><span data-es="Rendimiento · Manta" data-en="Performance · Manta">Rendimiento · Manta</span></div>
         <div class="it"><b>Umiña Padel Club</b><span data-es="Competencias costeras" data-en="Coastal competitions">Competencias costeras</span></div>
       </div>
       <div class="tcard">
-        <div class="ic">⛰️</div>
         <h4 data-es="Quito Élite" data-en="Quito Elite">Quito Élite</h4>
         <div class="it"><b>Q-padel</b><span data-es="Alto rendimiento y preparación física · Quito" data-en="High performance & physical training · Quito">Alto rendimiento y preparación física · Quito</span></div>
       </div>
@@ -676,9 +668,9 @@ footer .mono{font-family:var(--title);color:var(--red);letter-spacing:.06em}
     <h2 data-es="¿Sumamos<br><span class='red'>esfuerzos?</span>" data-en="Shall we<br><span class='red'>join forces?</span>">¿Sumamos<br><span class="red">esfuerzos?</span></h2>
     <div class="phr" data-es="Hagamos equipo para comernos el mundo del pádel." data-en="Let's team up and take on the world of padel.">Hagamos equipo para comernos el mundo del pádel.</div>
     <div class="cgrid">
-      <div class="cc"><div class="ic">✉️</div><div class="k" data-es="Correo" data-en="Email">Correo</div><a class="v" href="mailto:mateoherrerasedgwick@gmail.com">mateoherrerasedgwick@gmail.com</a></div>
-      <div class="cc"><div class="ic">📷</div><div class="k">Instagram</div><a class="v" href="https://instagram.com/mateo.herrerass" target="_blank" rel="noopener">@mateo.herrerass</a></div>
-      <div class="cc"><div class="ic">📍</div><div class="k" data-es="Ubicación" data-en="Location">Ubicación</div><div class="v" data-es="Miami, FL · EE.UU." data-en="Miami, FL · USA">Miami, FL · EE.UU.</div></div>
+      <div class="cc"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div class="k" data-es="Correo" data-en="Email">Correo</div><a class="v" href="mailto:mateoherrerasedgwick@gmail.com">mateoherrerasedgwick@gmail.com</a></div>
+      <div class="cc"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></div><div class="k">Instagram</div><a class="v" href="https://instagram.com/mateo.herrerass" target="_blank" rel="noopener">@mateo.herrerass</a></div>
+      <div class="cc"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.7-7-11a7 7 0 0 1 14 0c0 5.3-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div class="k" data-es="Ubicación" data-en="Location">Ubicación</div><div class="v" data-es="Miami, FL · EE.UU." data-en="Miami, FL · USA">Miami, FL · EE.UU.</div></div>
     </div>
   </div>
 </section>
